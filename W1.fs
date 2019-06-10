@@ -6,6 +6,10 @@ open Extensions
 open PriorityQueue
 open System.Collections.Generic
 
+// +++++++++
+// + Day 1 +
+// +++++++++
+
 module Day1 =
   let findDuplicate (xs : int []) =
     let rec go i freq set =
@@ -18,10 +22,6 @@ module Day1 =
           else go (i + 1) freq2 (Set.add freq2 set)
 
     go 0 0 (Set.singleton 0)
-
-// +++++++++
-// + Day 1 +
-// +++++++++
 
   let readAndRun () =
     let lines =
